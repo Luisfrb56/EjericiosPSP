@@ -12,7 +12,7 @@ public class Ascensor {
         while( nocamino == true )
             {
             try {
-                wait(); // Se sale cuando estaLlena cambia a false
+                wait(); 
             } catch( InterruptedException e ) {
                 ;
                 }
@@ -33,7 +33,7 @@ public class Ascensor {
         while( camino == true )
             {
             try {
-                wait(); // Se sale cuando estaLlena cambia a false
+                wait(); 
             } catch( InterruptedException e ) {
                 ;
                 }
