@@ -8,7 +8,10 @@ public class Ascensor {
     private boolean nocamino = true;
     
  public synchronized void ir1(int c) {
-     
+     /*
+     metodo synchronized mandandole un int 
+     tenemos un while que activar o desactivar el metodo.
+     */
         while( nocamino == true )
             {
             try {
@@ -30,6 +33,10 @@ public class Ascensor {
          
  }
   public synchronized void ir2(int c) {
+      /*
+     metodo synchronized mandandole un int que es el piso alque ira
+     tenemos un while que activar o desactivar el metodo.
+     */
         while( camino == true )
             {
             try {
