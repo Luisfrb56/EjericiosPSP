@@ -22,19 +22,23 @@ public class Hilo1 extends Thread {
                 y ejecutamos el metodode la clase monitor.
                 */
             c=Integer.valueOf(JOptionPane.showInputDialog("Piso al que ir:"));
+             if(c<=20){
             ascensor.ir1(c);
-
+                /*
+                imprimimos Ascensor en camino 
+                */
+            System.out.println("En camino");
+            System.out.println( "Llegada al : "+c+"º Piso");
+             }
             try {
                   /*
                 sleep random
                 */
                 sleep( (int)(Math.random() * 500 ) );
-                 /*
-                imprimimos Ascensor en camino 
-                */
-                System.out.println("En camino");
+                
+                
             } catch( InterruptedException e ) {;}
-            System.out.println( "Llegada al : "+c+"º Piso");
+            
             }
         }
 }
