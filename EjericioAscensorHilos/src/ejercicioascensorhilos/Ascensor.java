@@ -34,7 +34,7 @@ public class Ascensor {
  }
   public synchronized void ir2(int c) {
       /*
-     metodo synchronized mandandole un int que es el piso alque ira
+    metodo synchronized mandandole un int que es el piso alque ira
      tenemos un while que activar o desactivar el metodo.
      */
         while( camino == true )
