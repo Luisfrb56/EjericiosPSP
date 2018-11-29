@@ -5,20 +5,23 @@ public class HiloRecibir extends Thread{
     private Buzon buzon;
 
     public HiloRecibir( Buzon b ) {
-        // Mantiene una copia propia del objeto compartido
+        
         buzon = b;
         }
 
     public void run() {
         String c;
 
-        // Consume 10 letras de la tuber�a
+        // Ejecuta un maximo de 10 veces los hilos
         for( int i=0; i < 10; i++ )
             {
+                /*
+                Borra el mensaje que tengamos dentro
+                */
             c = buzon.borrarM();
-            // Imprime las letras retiradas
+            //Imprime que haya sido borrado
             System.out.println( "Borrado "+c );
-            // Espera un poco antes de coger m�s letras
+            // Espera un poco antes de borrar otro mensaje
             try {
                 sleep( (int)(Math.random() * 2000 ) );
             } catch( InterruptedException e ) {;}

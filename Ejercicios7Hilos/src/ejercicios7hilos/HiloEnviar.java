@@ -15,14 +15,15 @@ public class HiloEnviar extends Thread{
     public void run() {
         String c;
 
-        // Mete 10 letras en la tuber�a
+        // Mandamos 10 veces maximo, un mensaje que nos pedira por JOptionPane
         for( int i=0; i < 10; i++ )
             {
             c=JOptionPane.showInputDialog("Mensaje:");
             buzon.recibirM(c);
-            // Imprime un registro con lo a�adido
+            // Imprime que el mensaje haya sido recibido
             System.out.println( "Mensaje recibido: "+c);
             // Espera un poco antes de a�adir m�s letras
+            //y lo duerme de manera random
             try {
                 sleep( (int)(Math.random() * 100 ) );
             } catch( InterruptedException e ) {;}
